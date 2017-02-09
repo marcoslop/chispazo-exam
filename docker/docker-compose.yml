@@ -1,0 +1,9 @@
+version: '2'
+services:
+  wildfly:
+    container_name: "wildfly-useradmin"
+    build: .
+    ports:
+      - 9990:9990
+      - 8080:8080
+      - 8787:8787

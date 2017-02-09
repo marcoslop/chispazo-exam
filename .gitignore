@@ -1,0 +1,14 @@
+/build
+/.gradle
+/.settings
+/.classpath
+/.project
+/chispazo-exam.iml
+/bin
+
+target/
+
+.idea/
+.idea/**
+.idea/dataSources.xml
+*.iml
