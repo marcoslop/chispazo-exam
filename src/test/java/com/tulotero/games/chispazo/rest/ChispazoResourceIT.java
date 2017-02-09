@@ -11,7 +11,7 @@ public class ChispazoResourceIT {
     @Test
     public void testGetInfoForDraw3ShouldReturnInfo() throws Exception {
         when().
-                get("/tuloterogames/rest/chispazo/draws/{drawId}", 3L).
+                get("/chispazo/rest/chispazo/draws/{drawId}", 3L).
         then().
                 statusCode(200).
                 body("winningNumbers", is(asList(5, 8, 10, 15, 15)));

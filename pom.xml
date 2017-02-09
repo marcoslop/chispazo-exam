@@ -58,7 +58,7 @@
     </dependencies>
 
     <build>
-        <finalName>tuloterogames</finalName>
+        <finalName>chispazo</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -70,6 +70,40 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <configuration>
+                    <webXml>src\main\webapp\WEB-INF\web.xml</webXml>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.16</version>
+                <configuration>
+                    <testSourceDirectory></testSourceDirectory>
+                    <encoding>UTF-8</encoding>
+                    <argLine>-Xms512m -Xmx1024m -XX:MaxPermSize=512m -Dfile.encoding=UTF-8</argLine>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>integration-test</id>
+                        <phase>integration-test</phase>
+                        <goals>
+                            <goal>integration-test</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>verify</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>verify</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
 
             <plugin>
                 <groupId>io.fabric8</groupId>
@@ -77,31 +111,33 @@
                 <version>0.16.7</version>
                 <configuration>
                     <dockerHost>unix:///var/run/docker.sock</dockerHost>
-                    <image>
-                        <name>tulotero/tuloterogames:latest</name>
-                        <alias>tuloterogames</alias>
-                        <build>
-                            <dockerFileDir>${project.basedir}</dockerFileDir>
-                        </build>
-                        <run>
-                            <ports>
-                                <port>8080:8080</port>
-                            </ports>
-                            <wait>
-                                <http>
-                                    <url>http://localhost:8080/tuloterogames/rest/chispazo/draws/1</url>
-                                    <method>GET</method>
-                                    <status>200</status>
-                                </http>
-                                <time>200000</time>
-                            </wait>
-                            <log>
-                                <prefix>tuloterogames</prefix>
-                                <date>ISO8601</date>
-                                <color>blue</color>
-                            </log>
-                        </run>
-                    </image>
+                    <images>
+                        <image>
+                            <name>tulotero/chispazo:latest</name>
+                            <alias>chispazo</alias>
+                            <build>
+                                <dockerFileDir>${project.basedir}</dockerFileDir>
+                            </build>
+                            <run>
+                                <ports>
+                                    <port>8080:8080</port>
+                                </ports>
+                                <wait>
+                                    <http>
+                                        <url>http://localhost:8080/chispazo/rest/chispazo/draws/1</url>
+                                        <method>GET</method>
+                                        <status>200</status>
+                                    </http>
+                                    <time>200000</time>
+                                </wait>
+                                <log>
+                                    <prefix>chispazo</prefix>
+                                    <date>ISO8601</date>
+                                    <color>blue</color>
+                                </log>
+                            </run>
+                        </image>
+                    </images>
                 </configuration>
                 <executions>
                     <execution>
