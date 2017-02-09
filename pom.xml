@@ -78,6 +78,7 @@
                 </configuration>
             </plugin>
 
+            <!-- To launch *IT tests on verify phase -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-failsafe-plugin</artifactId>
@@ -105,6 +106,7 @@
                 </executions>
             </plugin>
 
+            <!-- To launch build chispazo image and start it on verify phase -->
             <plugin>
                 <groupId>io.fabric8</groupId>
                 <artifactId>docker-maven-plugin</artifactId>
