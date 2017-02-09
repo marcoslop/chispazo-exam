@@ -1,3 +1,19 @@
+# Exercise
+
+This is an exercise to evaluate some developer skills in order to apply to a backend position inside TuLotero.
+ 
+The exercise consists on 2 steps:
+    - Achieve build success on Test phase.
+    - Achieve build success on Verify phase.
+    
+Once you have the exercise finished, create a git patch and send it to us, so that we can evaluate your solution.
+
+The final objective of this exercise is to see if the developer has some needed skills that are used in TuLotero.
+If the developer doesn´t have the knowledge yet about these technologies, he should be able to investigate them
+by his own and acquire them to solve some parts of this exercise.
+
+There is no need to finish all the exercise, you can stop whenever you want. Later we will discuss it in an interview.
+
 # Prerequisites
 
 This is a Maven project, so you will need to have maven installed in your computer.
@@ -26,11 +42,11 @@ by his own and acquire them to solve some parts of this exercise.
 
 There is no need to finish all the exercise, you can stop whenever you want. Later we will discuss it in an interview.
 
-## Test phase
+# Test phase
 
 First you have to execute 'mvn clean test' and fix all failed tests until you can achieve a 'BUILD SUCCESS'.
 
-## Verify phase
+# Verify phase
 
 Once you have SUCCESS on the previous step, you will have to execute 'mvn clean verify'. 
 This will start a docker container with the project deployed. 
