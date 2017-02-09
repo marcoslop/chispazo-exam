@@ -1,5 +1,7 @@
-package com.tulotero.games.chispazo;
+package com.tulotero.games.chispazo.rest;
 
+import com.tulotero.games.chispazo.ChispazoDrawService;
+import com.tulotero.games.chispazo.ChispazoPrizeCalculator;
 import com.tulotero.games.chispazo.beans.ChispazoBet;
 import com.tulotero.games.chispazo.beans.ChispazoDraw;
 
@@ -19,7 +21,7 @@ public class ChispazoResource {
     @Inject
     ChispazoPrizeCalculator prizeCalculator;
 
-    @Path("/draw/{drawId}")
+    @Path("/draws/{drawId}")
     @GET
     public Response getDrawInfo(@PathParam("drawId") Long drawId){
         Optional<ChispazoDraw> drawOpt = drawService.getDraw(drawId);
@@ -33,7 +35,7 @@ public class ChispazoResource {
         }
     }
 
-    @Path("/draw/{drawId}/prize")
+    @Path("/draws/{drawId}/prize")
     @POST
     public Response calculatePrizeInfo(@PathParam("drawId") Long drawId,
                                         ChispazoBet bet){

@@ -1,10 +1,13 @@
-package com.tulotero.games.chispazo;
+package com.tulotero.games.chispazo.rest;
 
 import com.tulotero.games.beans.PrizeInfo;
 import com.tulotero.games.beans.ScrutinyPrize;
+import com.tulotero.games.chispazo.ChispazoDrawService;
+import com.tulotero.games.chispazo.ChispazoPrizeCalculator;
 import com.tulotero.games.chispazo.beans.ChispazoBet;
 import com.tulotero.games.chispazo.beans.ChispazoDraw;
 import com.tulotero.games.chispazo.beans.ChispazoPrizeCheck;
+import com.tulotero.games.chispazo.rest.ChispazoResource;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;

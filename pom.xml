@@ -48,11 +48,17 @@
             <version>2.22.2</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>3.0.2</version>
+            <scope>test</scope>
+        </dependency>
 
     </dependencies>
 
     <build>
-        <finalName>primitiva</finalName>
+        <finalName>tuloterogames</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -63,6 +69,57 @@
                     <target>1.8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>io.fabric8</groupId>
+                <artifactId>docker-maven-plugin</artifactId>
+                <version>0.16.7</version>
+                <configuration>
+                    <dockerHost>unix:///var/run/docker.sock</dockerHost>
+                    <image>
+                        <name>tulotero/tuloterogames:latest</name>
+                        <alias>tuloterogames</alias>
+                        <build>
+                            <dockerFileDir>${project.basedir}</dockerFileDir>
+                        </build>
+                        <run>
+                            <ports>
+                                <port>8080:8080</port>
+                            </ports>
+                            <wait>
+                                <http>
+                                    <url>http://localhost:8080/tuloterogames/rest/chispazo/draws/1</url>
+                                    <method>GET</method>
+                                    <status>200</status>
+                                </http>
+                                <time>200000</time>
+                            </wait>
+                            <log>
+                                <prefix>tuloterogames</prefix>
+                                <date>ISO8601</date>
+                                <color>blue</color>
+                            </log>
+                        </run>
+                    </image>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>start</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>build</goal>
+                            <goal>start</goal>
+                        </goals>
+                    </execution>
+                    <execution>
+                        <id>stop</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>stop</goal>
+                        </goals>
+                    </execution>
+                </executions>
             </plugin>
 
         </plugins>
