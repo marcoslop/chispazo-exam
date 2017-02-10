@@ -69,7 +69,9 @@ If you have performed the previous exercises correctly you will see a BUILD SUCC
 
 ## Exercise 4 - ChispazoResourceIT
 
-This is an integration Test. When you execute `mvn clean verify`, a docker image including a wildfly with this war
+This is an integration Test. This test won't be launched until you have achieved a success in previous steps. 
+
+When you execute `mvn clean verify`, a docker image including a wildfly with this war
 deployed will be created and started. Once the container is started, ChispazoResourceIT will test our REST API by
 performing some real HTTP requests. You will need to perform the required changes in the project so that this test
 passes.
