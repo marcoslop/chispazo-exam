@@ -4,7 +4,7 @@ This is an exercise to evaluate some developer skills in order to apply to a bac
  
 The exercise consists on several steps that are explained later.
     
-Once you have the exercise finished, create a git patch and send it to us, so that we can evaluate your solution.
+Once you have the exercise finished, create a ´git patch´ and send it to us, so that we can evaluate your solution.
 
 The final objective of this exercise is to see if the developer has some needed skills that are used in TuLotero.
 If the developer doesn't have the knowledge yet about these technologies, he should be able to investigate them
