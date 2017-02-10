@@ -4,7 +4,7 @@ This is an exercise to evaluate some developer skills in order to apply to a bac
  
 The exercise consists on several steps that are explained later.
     
-Once you have the exercise finished, create a git patch and send it to us, so that we can evaluate your solution.
+Once you have the exercise finished, create a `git patch` and send it to us, so that we can evaluate your solution.
 
 The final objective of this exercise is to see if the developer has some needed skills that are used in TuLotero.
 If the developer doesn't have the knowledge yet about these technologies, he should be able to investigate them
@@ -31,14 +31,15 @@ For one of the exercises you will need to have Docker installed.
 
 # Chispazo Exercises
 
-Chispazo is a game from Mexico, which consists on playing 5 numbers from 1 to 28.
+Chispazo is a game from Mexico, which consists on playing 5 numbers from 1 to 28. It's very similar to Primitiva in Spain
+ but it does not have a Refund number (reintegro)
 
 This project has some business logic classes based on this game. You will need to create some implementations, so that 
 all the tests pass.
 
 ## Exercise 1 - ChispazoBet
 
-If you execute 'mvn clean test' you will see that there are some failed tests in ChispazoBetTests.
+If you execute `mvn clean test` you will see that there are some failed tests in ChispazoBetTests.
 
 ChispazoBet is a class that simulates the numbers that the user is playing. Must be 5 numbers from 1 to 28.
 
@@ -46,7 +47,7 @@ Please, implement the required changes in ChispazoBet, so that ChispazoBetTests 
 
 ## Exercise 2 - ChispazoPrizeCalculator
 
-If you execute 'mvn clean test' you will see that there are some failed tests in ChispazoPrizeCalculatorTest.
+If you execute `mvn clean test` you will see that there are some failed tests in ChispazoPrizeCalculatorTest.
 
 ChispazoDrawService is a class that receives a bet from the user, the results of the draw with the winningNumbers
 and has to return an inmutable object with the prize and the amount of numbers that he has achieved.
@@ -55,20 +56,20 @@ Please, implement the required changes in ChispazoDrawService, so that ChispazoD
 
 ## Exercise 3 - ChispazoResource
 
-If you execute 'mvn clean test' you will see that there are some failed tests in ChispazoResourceTest.
+If you execute `mvn clean test` you will see that there are some failed tests in ChispazoResourceTest.
 
 ChispazoResource is the REST entry for Chispazo Logic. Now you can get the information of a draw by invoking: 
-/chispazo/rest/chispazo/draws/1. This method is already implemented and tested.
+`/chispazo/rest/chispazo/draws/1`. This method is already implemented and tested.
 
 But method 'calculatePrizeInfo' is not implemented. Please implement it so that ChispazoResourceTest tests pass.
 
 ## mvn clean test SUCCESS
 
-If you have performed the previous exercises correctly you will see a BUILD SUCCESS if you execute 'mvn clean test'.
+If you have performed the previous exercises correctly you will see a BUILD SUCCESS if you execute `mvn clean test`.
 
 ## Exercise 4 - ChispazoResourceIT
 
-This is an integration Test. When you execute 'mvn clean verify', a docker image including a wildfly with this war
+This is an integration Test. When you execute `mvn clean verify`, a docker image including a wildfly with this war
 deployed will be created and started. Once the container is started, ChispazoResourceIT will test our REST API by
 performing some real HTTP requests. You will need to perform the required changes in the project so that this test
 passes.
@@ -78,10 +79,11 @@ one you must use the date of the Draw.
 
 You will need to have docker installed in your machine in order to pass this test.
 
-Once you have achieved this exercise, you will receive a BUILD SUCCESS when you execute 'mvn clean verify'.
+Once you have achieved this exercise, you will receive a BUILD SUCCESS when you execute `mvn clean verify`.
 
 ## Git patch
 
 Please send us a git patch with the solution, so that we can evaluate your solution and talk about it with you.
 
+Don´t send us a pull request because it would be public and other people would see you solution.
 
