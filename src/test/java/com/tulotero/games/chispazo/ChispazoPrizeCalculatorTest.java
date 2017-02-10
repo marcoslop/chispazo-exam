@@ -9,6 +9,8 @@ import org.joda.time.DateTime;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Collections;
+
 import static java.util.Arrays.asList;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -29,7 +31,7 @@ public class ChispazoPrizeCalculatorTest {
 
         PrizeInfo prizeInfo = prizeCalculator.calculatePrize(new ChispazoPrizeCheck(bet, drawResult));
 
-        assertThat(prizeInfo.getNumbersAchieved(), is(0));
+        assertThat(prizeInfo.getNumbersAchieved(), is(Collections.emptyList()));
         assertThat(prizeInfo.getPrize(), is(0D));
     }
 
@@ -40,7 +42,7 @@ public class ChispazoPrizeCalculatorTest {
 
         PrizeInfo prizeInfo = prizeCalculator.calculatePrize(new ChispazoPrizeCheck(bet, drawResult));
 
-        assertThat(prizeInfo.getNumbersAchieved(), is(1));
+        assertThat(prizeInfo.getNumbersAchieved(), is(asList(1)));
         assertThat(prizeInfo.getPrize(), is(1D));
     }
 
@@ -51,7 +53,7 @@ public class ChispazoPrizeCalculatorTest {
 
         PrizeInfo prizeInfo = prizeCalculator.calculatePrize(new ChispazoPrizeCheck(bet, drawResult));
 
-        assertThat(prizeInfo.getNumbersAchieved(), is(2));
+        assertThat(prizeInfo.getNumbersAchieved(), is(asList(1,2)));
         assertThat(prizeInfo.getPrize(), is(10D));
     }
 
@@ -62,7 +64,7 @@ public class ChispazoPrizeCalculatorTest {
 
         PrizeInfo prizeInfo = prizeCalculator.calculatePrize(new ChispazoPrizeCheck(bet, drawResult));
 
-        assertThat(prizeInfo.getNumbersAchieved(), is(3));
+        assertThat(prizeInfo.getNumbersAchieved(), is(asList(1,2,3)));
         assertThat(prizeInfo.getPrize(), is(1000D));
     }
 
@@ -73,7 +75,7 @@ public class ChispazoPrizeCalculatorTest {
 
         PrizeInfo prizeInfo = prizeCalculator.calculatePrize(new ChispazoPrizeCheck(bet, drawResult));
 
-        assertThat(prizeInfo.getNumbersAchieved(), is(4));
+        assertThat(prizeInfo.getNumbersAchieved(), is(asList(1,2,3,4)));
         assertThat(prizeInfo.getPrize(), is(100000D));
     }
 
@@ -84,7 +86,7 @@ public class ChispazoPrizeCalculatorTest {
 
         PrizeInfo prizeInfo = prizeCalculator.calculatePrize(new ChispazoPrizeCheck(bet, drawResult));
 
-        assertThat(prizeInfo.getNumbersAchieved(), is(5));
+        assertThat(prizeInfo.getNumbersAchieved(), is(asList(1,2,3,4,5)));
         assertThat(prizeInfo.getPrize(), is(1000000D));
     }
 

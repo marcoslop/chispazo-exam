@@ -70,7 +70,7 @@ public class ChispazoResourceTest {
         ChispazoDraw draw = givenDraw(DRAW_ID);
         when(drawService.getDraw(DRAW_ID)).thenReturn(Optional.of(draw));
         ChispazoPrizeCheck prizeCheck = new ChispazoPrizeCheck(bet, draw);
-        PrizeInfo prizeInfo = new PrizeInfo(10D, 3);
+        PrizeInfo prizeInfo = new PrizeInfo(10D, asList(1,2,3));
         when(prizeCalculator.calculatePrize(prizeCheck)).thenReturn(prizeInfo);
 
         Response response = resource.calculatePrizeInfo(DRAW_ID, bet);

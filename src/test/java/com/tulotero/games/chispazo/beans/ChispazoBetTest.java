@@ -3,6 +3,8 @@ package com.tulotero.games.chispazo.beans;
 import org.junit.Test;
 
 import static java.util.Arrays.asList;
+import static org.hamcrest.Matchers.is;
+import static org.junit.Assert.assertThat;
 
 public class ChispazoBetTest {
 
@@ -34,5 +36,12 @@ public class ChispazoBetTest {
     @Test(expected = IllegalArgumentException.class)
     public void testShouldThrowExceptionIfNumberIsLessThan1() throws Exception {
         new ChispazoBet(asList(0,2,3,4,28));
+    }
+
+    @Test
+    public void testShouldOrderNumbersEven() throws Exception {
+        ChispazoBet chispazoBet = new ChispazoBet(asList(5, 2, 4, 3, 1));
+
+        assertThat(chispazoBet.getNumbers(), is(asList(1,2,3,4,5)));
     }
 }
