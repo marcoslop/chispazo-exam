@@ -24,7 +24,7 @@ public class ChispazoResourceIT {
                 get("/chispazo/rest/chispazo/draws/active").
         then().
                 statusCode(200).
-                body("drawId", is(1L));
+                body("drawId", is(1));
     }
 
 }
