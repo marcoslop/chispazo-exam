@@ -8,7 +8,7 @@ public class ChispazoBetTest {
 
     @Test
     public void testShouldCreateOkIfBetWith5Numbers() throws Exception {
-        new ChispazoBet(asList(1,2,3,4,27));
+        new ChispazoBet(asList(1,2,3,4,28));
     }
 
     @Test(expected = IllegalArgumentException.class)

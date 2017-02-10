@@ -14,7 +14,7 @@ public class ChispazoResourceIT {
                 get("/chispazo/rest/chispazo/draws/{drawId}", 3L).
         then().
                 statusCode(200).
-                body("winningNumbers", is(asList(5, 8, 10, 15, 15)));
+                body("winningNumbers", is(asList(5, 8, 10, 15, 25)));
 
     }
 
