@@ -7,13 +7,13 @@ The exercise consists on several steps that are explained later.
 Once you have the exercise finished, create a git patch and send it to us, so that we can evaluate your solution.
 
 The final objective of this exercise is to see if the developer has some needed skills that are used in TuLotero.
-If the developer doesn´t have the knowledge yet about these technologies, he should be able to investigate them
+If the developer doesn't have the knowledge yet about these technologies, he should be able to investigate them
 by his own and acquire them to solve some parts of this exercise.
 
 We want to see how you develop. I must warn you that, if we have to choose between:
 
-- Code that is super fast and optimum but it´s very difficult to understand.
-- Code that is not the best solution (in performance) but it´s legible and easy to understand.
+- Code that is super fast and optimum but it's very difficult to understand.
+- Code that is not the best solution (in performance) but it's legible and easy to understand.
  
 We prefer the second option.
 
@@ -21,11 +21,11 @@ There is no need to finish all the exercise, you can stop whenever you want. Lat
 
 # Prerequisites in computer
 
-We will need that you send us a git patch, so you need to have Git installed.
+We will need to clone this project, so you need to have Git installed.
 
 This is a Maven project, so you will need to have maven installed in your computer.
 
-This project also uses Lombok. You IDE will need to have a plugin that supports it. Otherwise it won´t compile.
+This project also uses Lombok. You IDE will need to have a plugin that supports it. Otherwise it won't compile.
 
 For one of the exercises you will need to have Docker installed.
 
@@ -79,6 +79,6 @@ Once you have achieved this exercise, you will receive a BUILD SUCCESS when you 
 
 ## Git patch
 
-Please send us a git patch, so that we can evaluate your solution and talk about it with you.
+Please send us a git patch with the solution, so that we can evaluate your solution and talk about it with you.
 
 
