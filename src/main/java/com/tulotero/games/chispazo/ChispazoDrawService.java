@@ -2,6 +2,7 @@ package com.tulotero.games.chispazo;
 
 import com.tulotero.games.beans.ScrutinyPrize;
 import com.tulotero.games.chispazo.beans.ChispazoDraw;
+import org.joda.time.DateTime;
 
 import java.util.List;
 import java.util.Optional;
@@ -13,6 +14,7 @@ public class ChispazoDrawService {
     private static final List<ChispazoDraw> FIXED_DRAWS = asList(
             new ChispazoDraw(
                     1L,
+                    new DateTime().minusDays(1).toDate(),
                     asList(5, 10, 15, 20, 25),
                     asList(
                             new ScrutinyPrize(5, 1000000D),
@@ -24,6 +26,19 @@ public class ChispazoDrawService {
             ),
             new ChispazoDraw(
                     2L,
+                    new DateTime().plusDays(1).toDate(),
+                    asList(5, 10, 15, 20, 25),
+                    asList(
+                            new ScrutinyPrize(5, 1000000D),
+                            new ScrutinyPrize(4, 100000D),
+                            new ScrutinyPrize(3, 1000D),
+                            new ScrutinyPrize(2, 10D),
+                            new ScrutinyPrize(1, 1D)
+                    )
+            ),
+            new ChispazoDraw(
+                    3L,
+                    new DateTime().plusDays(2).toDate(),
                     asList(5, 10, 15, 20, 25),
                     asList(
                             new ScrutinyPrize(5, 1000000D),
