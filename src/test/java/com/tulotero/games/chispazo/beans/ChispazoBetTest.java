@@ -27,8 +27,8 @@ public class ChispazoBetTest {
     }
 
     @Test(expected = IllegalArgumentException.class)
-    public void testShouldThrowExceptionIfNumberIsBiggerThan27() throws Exception {
-        new ChispazoBet(asList(1,2,3,4,28));
+    public void testShouldThrowExceptionIfNumberIsBiggerThan28() throws Exception {
+        new ChispazoBet(asList(1,2,3,4,29));
     }
 
     @Test(expected = IllegalArgumentException.class)

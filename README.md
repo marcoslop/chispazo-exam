@@ -2,9 +2,7 @@
 
 This is an exercise to evaluate some developer skills in order to apply to a backend position inside TuLotero.
  
-The exercise consists on 2 steps:
-    - Achieve build success on Test phase.
-    - Achieve build success on Verify phase.
+The exercise consists several steps that are explained later.
     
 Once you have the exercise finished, create a git patch and send it to us, so that we can evaluate your solution.
 
