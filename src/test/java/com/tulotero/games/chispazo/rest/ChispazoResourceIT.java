@@ -9,22 +9,12 @@ import static org.hamcrest.core.Is.is;
 public class ChispazoResourceIT {
 
     @Test
-    public void testGetInfoForDraw3ShouldReturnInfo() throws Exception {
+    public void testNextOpenedDrawShouldReturnDraw1() throws Exception {
         when().
-                get("/chispazo/rest/chispazo/draws/{drawId}", 4L).
+                get("/chispazo/rest/chispazo/draws/opened/next").
         then().
                 statusCode(200).
-                body("winningNumbers", is(asList(5, 8, 10, 15, 25)));
-
-    }
-
-    @Test
-    public void testGetActiveDrawShouldReturnDraw1() throws Exception {
-        when().
-                get("/chispazo/rest/chispazo/draws/next").
-        then().
-                statusCode(200).
-                body("drawId", is(2));
+                body("drawId", is(3));
     }
 
 }

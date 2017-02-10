@@ -8,6 +8,7 @@ import com.tulotero.games.chispazo.beans.ChispazoBet;
 import com.tulotero.games.chispazo.beans.ChispazoDraw;
 import com.tulotero.games.chispazo.beans.ChispazoPrizeCheck;
 import com.tulotero.games.chispazo.rest.ChispazoResource;
+import org.joda.time.DateTime;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
@@ -90,8 +91,9 @@ public class ChispazoResourceTest {
     }
 
     private ChispazoDraw givenDraw(Long drawId){
-        return new ChispazoDraw(
+        return ChispazoDraw.finished(
                 drawId,
+                new DateTime().minusDays(1).toDate(),
                 asList(5, 10, 15, 20, 25),
                 asList(
                         new ScrutinyPrize(5, 1000000D),

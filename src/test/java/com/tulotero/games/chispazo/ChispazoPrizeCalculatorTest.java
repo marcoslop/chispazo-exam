@@ -5,6 +5,7 @@ import com.tulotero.games.beans.ScrutinyPrize;
 import com.tulotero.games.chispazo.beans.ChispazoBet;
 import com.tulotero.games.chispazo.beans.ChispazoDraw;
 import com.tulotero.games.chispazo.beans.ChispazoPrizeCheck;
+import org.joda.time.DateTime;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -88,8 +89,9 @@ public class ChispazoPrizeCalculatorTest {
     }
 
     private ChispazoDraw givenDrawResult(){
-        return new ChispazoDraw(
+        return ChispazoDraw.finished(
                 1L,
+                new DateTime().minusDays(1).toDate(),
                 asList(1, 2, 3, 4, 5),
                 asList(
                         new ScrutinyPrize(5, 1000000D),

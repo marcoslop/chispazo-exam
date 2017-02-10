@@ -15,4 +15,40 @@ public class ChispazoDraw {
     List<Integer> winningNumbers;
     List<ScrutinyPrize> prizes;
 
+    private ChispazoDraw(
+            Long drawId,
+            Date date,
+            List<Integer> winningNumbers,
+            List<ScrutinyPrize> prizes
+    ){
+        this.drawId = drawId;
+        this.date = date;
+        this.winningNumbers = winningNumbers;
+        this.prizes = prizes;
+    }
+
+    public static ChispazoDraw finished(
+            Long drawId,
+            Date date,
+            List<Integer> winningNumbers,
+            List<ScrutinyPrize> prizes
+    ){
+        return new ChispazoDraw(drawId, date, winningNumbers, prizes);
+    }
+
+    public static ChispazoDraw opened(
+            Long drawId,
+            Date date
+    ){
+        return new ChispazoDraw(drawId, date, null, null);
+    }
+
+    public boolean isFinished(){
+        return winningNumbers!=null;
+    }
+
+    public boolean isOpened(){
+        return date.after(new Date());
+    }
+
 }
