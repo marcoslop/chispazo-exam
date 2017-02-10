@@ -18,4 +18,13 @@ public class ChispazoResourceIT {
 
     }
 
+    @Test
+    public void testGetActiveDrawShouldReturnDraw1() throws Exception {
+        when().
+                get("/chispazo/rest/chispazo/draws/active").
+        then().
+                statusCode(200).
+                body("drawId", is(1L));
+    }
+
 }
