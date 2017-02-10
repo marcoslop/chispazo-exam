@@ -85,5 +85,5 @@ Once you have achieved this exercise, you will receive a BUILD SUCCESS when you 
 
 Please send us a git patch with the solution, so that we can evaluate your solution and talk about it with you.
 
-Don´t send us a pull request because it would be public and other people would see you solution.
+Don´t send us a pull request because it would be public and other people would see your solution.
 
