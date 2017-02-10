@@ -73,6 +73,9 @@ deployed will be created and started. Once the container is started, ChispazoRes
 performing some real HTTP requests. You will need to perform the required changes in the project so that this test
 passes.
 
+In this case we want you to implement a new REST service that returns the next Opened Draw. To know which is the next
+one you must use the date of the Draw.
+
 You will need to have docker installed in your machine in order to pass this test.
 
 Once you have achieved this exercise, you will receive a BUILD SUCCESS when you execute 'mvn clean verify'.
