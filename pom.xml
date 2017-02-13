@@ -196,6 +196,10 @@
                                     <name>TuLotero</name>
                                 </contact>
                             </info>
+                            <templatePath>${basedir}/src/test/resources/swagger/strapdown.html.hbs</templatePath>
+                            <outputPath>${basedir}/swagger-ui/chispazo/api.html</outputPath>
+                            <swaggerDirectory>${basedir}/swagger-ui/chispazo</swaggerDirectory>
+                            <swaggerApiReader>com.wordnik.swagger.jaxrs.reader.DefaultJaxrsApiReader</swaggerApiReader>
                         </apiSource>
                     </apiSources>
                 </configuration>
