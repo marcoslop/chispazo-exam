@@ -25,6 +25,13 @@
         </dependency>
 
         <dependency>
+            <groupId>io.swagger</groupId>
+            <artifactId>swagger-core</artifactId>
+            <scope>compile</scope>
+            <version>1.5.3</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-all</artifactId>
             <scope>test</scope>
@@ -160,6 +167,43 @@
                         <phase>post-integration-test</phase>
                         <goals>
                             <goal>stop</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <!-- To create API REST Documentation automatically -->
+            <plugin>
+                <groupId>com.github.kongchen</groupId>
+                <artifactId>swagger-maven-plugin</artifactId>
+                <version>3.1.2</version>
+                <configuration>
+                    <apiSources>
+                        <apiSource>
+                            <springmvc>false</springmvc>
+                            <locations>com.tulotero</locations>
+                            <schemes>http,https</schemes>
+                            <host>tulotero.net</host>
+                            <basePath>/tuloteroweb/rest</basePath>
+                            <info>
+                                <title>Chispazo API</title>
+                                <version>v1</version>
+                                <description>
+                                    Description of Chispazo API.
+                                </description>
+                                <contact>
+                                    <email>marcos@tulotero.es</email>
+                                    <name>TuLotero</name>
+                                </contact>
+                            </info>
+                        </apiSource>
+                    </apiSources>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>generate</goal>
                         </goals>
                     </execution>
                 </executions>
