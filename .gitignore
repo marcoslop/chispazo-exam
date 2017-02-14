@@ -5,6 +5,7 @@
 /.project
 /chispazo-exam.iml
 /bin
+/swagger-ui/**
 
 target/
 
