@@ -43,7 +43,7 @@ If you execute `mvn clean test` you will see that there are some failed tests in
 
 ChispazoBet is a class that simulates the numbers that the user is playing. Must be 5 numbers from 1 to 28.
 
-Please, implement the required changes in ChispazoBet, so that ChispazoBetTests passes.
+Please, implement the required changes in ChispazoBet, so that ChispazoBetTest passes.
 
 ## Exercise 2 - ChispazoPrizeCalculator
 
@@ -52,7 +52,7 @@ If you execute `mvn clean test` you will see that there are some failed tests in
 ChispazoDrawService is a class that receives a bet from the user, the results of the draw with the winningNumbers
 and has to return an inmutable object with the prize and the amount of numbers that he has achieved.
 
-Please, implement the required changes in ChispazoDrawService, so that ChispazoDrawServiceTests passes. 
+Please, implement the required changes in ChispazoPrizeCalculator, so that ChispazoPrizeCalculatorTests passes. 
 
 ## Exercise 3 - ChispazoResource
 
