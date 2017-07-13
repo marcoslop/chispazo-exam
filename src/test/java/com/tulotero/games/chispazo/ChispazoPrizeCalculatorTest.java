@@ -69,6 +69,17 @@ public class ChispazoPrizeCalculatorTest {
     }
 
     @Test
+    public void testShouldReturn3If3NumberIsAchievedUnordered() throws Exception {
+        ChispazoDraw drawResult = givenDrawResult();
+        ChispazoBet bet = new ChispazoBet(asList(3,4,5,6,7));
+
+        PrizeInfo prizeInfo = prizeCalculator.calculatePrize(new ChispazoPrizeCheck(bet, drawResult));
+
+        assertThat(prizeInfo.getNumbersAchieved(), is(asList(3,4,5)));
+        assertThat(prizeInfo.getPrize(), is(1000D));
+    }
+
+    @Test
     public void testShouldReturn4If4NumberIsAchieved() throws Exception {
         ChispazoDraw drawResult = givenDrawResult();
         ChispazoBet bet = new ChispazoBet(asList(1,2,3,4,10));
