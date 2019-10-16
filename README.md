@@ -49,7 +49,7 @@ Please, implement the required changes in ChispazoBet, so that ChispazoBetTest p
 
 If you execute `mvn clean test` you will see that there are some failed tests in ChispazoPrizeCalculatorTest.
 
-ChispazoDrawService is a class that receives a bet from the user, the results of the draw with the winningNumbers
+ChispazoPrizeCalculator is a class that receives a bet from the user, the results of the draw with the winningNumbers
 and has to return an inmutable object with the prize and the amount of numbers that he has achieved.
 
 Please, implement the required changes in ChispazoPrizeCalculator, so that ChispazoPrizeCalculatorTests passes. 
