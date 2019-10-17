@@ -39,12 +39,9 @@ public class ChispazoResource {
     public Response getDrawInfo(@PathParam("drawId") Long drawId){
         Optional<ChispazoDraw> drawOpt = drawService.getDraw(drawId);
         if (drawOpt.isPresent()){
-            return Response.status(Response.Status.OK)
-                    .entity(drawOpt.get())
-                    .build();
+            return createResponseDraw(drawOpt.get());
         }else{
-            return Response.status(Response.Status.NOT_FOUND)
-                    .build();
+            return createResponseNotFound();
         }
     }
 
@@ -61,6 +58,17 @@ public class ChispazoResource {
     public Response calculatePrizeInfo(@PathParam("drawId") Long drawId,
                                         ChispazoBet bet){
         throw new UnsupportedOperationException("To be developed following the tests in ChispazoResourceTest");
+    }
+
+    private Response createResponseDraw(ChispazoDraw draw) {
+        return Response.status(Response.Status.OK)
+                .entity(draw)
+                .build();
+    }
+
+    private Response createResponseNotFound() {
+        return Response.status(Response.Status.NOT_FOUND)
+                .build();
     }
 
 }
