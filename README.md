@@ -79,6 +79,10 @@ one you must use the date of the Draw.
 
 You will need to have docker installed in your machine in order to pass this test.
 
+Try to solve it as simple as possible. Do not suppose that we want an endpoint that can filter
+between some status, like next, finished, etc... We only want you to implement an endpoint that returns the next
+opened draw for Chispazo. Do not over prepare this method for doing more things that maybe wont be asked never in the future.
+
 ## BUILD SUCCESS
 
 Once you have achieved this exercise, you will receive a BUILD SUCCESS when you execute `mvn clean verify`.
