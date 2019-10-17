@@ -10,14 +10,12 @@ The final objective of this exercise is to see if the developer has some needed 
 If the developer doesn't have the knowledge yet about these technologies, he should be able to investigate them
 by his own and acquire them to solve some parts of this exercise.
 
-We want to see how you develop. I must warn you that, if we have to choose between:
+Try to implement the simplest solution posible. If you find a solution for an exercise that has been implemented in three lines... 
+don't think you have done it wrong. May be you've found the best approach.
 
-- Code that is super fast and optimum but it's very difficult to understand.
-- Code that is not the best solution (in performance) but it's legible and easy to understand.
- 
-We prefer the second option.
+Be aware that we have to understand your solution. Make a special effort to implement it as legible as posible.
 
-There is no need to finish all the exercise, you can stop whenever you want. Later we will discuss it in an interview.
+For this solution we prefer legibility over performance.
 
 # Prerequisites in computer
 
@@ -36,15 +34,6 @@ Chispazo is a game from Mexico, which consists on playing 5 numbers from 1 to 28
 
 This project has some business logic classes based on this game. You will need to create some implementations, so that 
 all the tests pass.
-
-## Before start... some advices
-
-Try to implement the simplest solution posible. If you find a solution for an exercise that has been implemented in three lines... 
-don't think you have done it wrong.
-
-Be aware that we have to understand your solution. Make a special effort to implement it as legible as posible.
-
-For this solution we prefer legibility over performance.
 
 ## Exercise 1 - ChispazoBet
 
