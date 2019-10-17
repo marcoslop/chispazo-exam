@@ -99,3 +99,5 @@ Please send us a git patch with the solution, so that we can evaluate your solut
 
 Don´t send us a pull request because it would be public and other people would see your solution.
 
+To review your solution we will create a new local branch and execute `git apply <your_solution.patch>`. Make sure the patch works. 
+
