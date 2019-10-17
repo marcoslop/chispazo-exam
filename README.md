@@ -37,6 +37,15 @@ Chispazo is a game from Mexico, which consists on playing 5 numbers from 1 to 28
 This project has some business logic classes based on this game. You will need to create some implementations, so that 
 all the tests pass.
 
+## Before start... some advices
+
+Try to implement the simplest solution posible. If you find a solution for an exercise that has been implemented in three lines... 
+don't think you have done it wrong.
+
+Be aware that we have to understand your solution. Make a special effort to implement it as legible as posible.
+
+For this solution we prefer legibility over performance.
+
 ## Exercise 1 - ChispazoBet
 
 If you execute `mvn clean test` you will see that there are some failed tests in ChispazoBetTests.
@@ -81,7 +90,15 @@ one you must use the date of the Draw.
 
 You will need to have docker installed in your machine in order to pass this test.
 
+## BUILD SUCCESS
+
 Once you have achieved this exercise, you will receive a BUILD SUCCESS when you execute `mvn clean verify`.
+
+## Exercise 5 - Tests
+
+If you use TDD this exercise will not be necessary for you because you already have all the tests done ;-).
+
+Please, make sure that all the implementations you have programmed for exercise 4 come with its corresponding unit tests.
 
 ## Git patch
 
