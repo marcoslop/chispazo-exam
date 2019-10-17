@@ -39,7 +39,7 @@ public class ChispazoResource {
     public Response getDrawInfo(@PathParam("drawId") Long drawId){
         Optional<ChispazoDraw> drawOpt = drawService.getDraw(drawId);
         if (drawOpt.isPresent()){
-            return createResponseDraw(drawOpt.get());
+            return createResponseOk(drawOpt.get());
         }else{
             return createResponseNotFound();
         }
@@ -60,9 +60,9 @@ public class ChispazoResource {
         throw new UnsupportedOperationException("To be developed following the tests in ChispazoResourceTest");
     }
 
-    private Response createResponseDraw(ChispazoDraw draw) {
+    private Response createResponseOk(Object entity) {
         return Response.status(Response.Status.OK)
-                .entity(draw)
+                .entity(entity)
                 .build();
     }
 
