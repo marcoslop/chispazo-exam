@@ -2,7 +2,7 @@ package com.tulotero.games.chispazo.rest;
 
 import com.tulotero.games.beans.PrizeInfo;
 import com.tulotero.games.chispazo.ChispazoDrawService;
-import com.tulotero.games.chispazo.ChispazoPrizeCalculator;
+import com.tulotero.games.chispazo.prizes.ChispazoPrizeCalculator;
 import com.tulotero.games.chispazo.beans.ChispazoBet;
 import com.tulotero.games.chispazo.beans.ChispazoDraw;
 import io.swagger.annotations.Api;

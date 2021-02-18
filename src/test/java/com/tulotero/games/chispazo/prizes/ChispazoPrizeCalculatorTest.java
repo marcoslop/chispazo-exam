@@ -1,4 +1,4 @@
-package com.tulotero.games.chispazo;
+package com.tulotero.games.chispazo.prizes;
 
 import com.tulotero.games.beans.PrizeInfo;
 import com.tulotero.games.beans.ScrutinyPrize;
