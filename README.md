@@ -101,3 +101,18 @@ Don´t send us a pull request because it would be public and other people would 
 
 To review your solution we will create a new local branch and execute `git apply <your_solution.patch>`. Make sure the patch works. 
 
+## Bonus for the interview
+
+Take a look at `ChispazoPrizeService`. It is an empty method with some comments of what has to be done here. We don't want you to implement anything. 
+Instead, we want you to think about this logic and the proposed implementation, so that we can talk about it in the technical interview. 
+
+This implementation can be useful if we only have few bets, maybe in a magnitude of hundreds. But imagine that the number of bets start to grow little by little and we are NOT going suddenly from 1.000 bets to 100.000.000. The growing is linear in time and we have time to take the best approach for each time.  
+
+- ¿What problems can you find when the number of bets start to grow? The problems with 100.000 bets may not be the same as with 100.000.000
+- ¿What solutions would you propose for each problem? We want you to propose us the best pragmatic solution for each moment. If we have 100.000 bets maybe it's not the time to over-engineer for 100.000.000 bets.
+
+We want you to take a look at this logic and think about it. We will discuss the technical decisions you would take in the technical interview.
+
+## Good Luck
+
+If you have any doubt, don't hesitate to ask to the person of Tulotero who is responsible for this process.
