@@ -1,6 +1,6 @@
 package com.tulotero.games.chispazo.prizes;
 
-import com.tulotero.games.chispazo.ChispazoDrawStore;
+import com.tulotero.games.chispazo.draw.ChispazoDrawStore;
 
 import javax.inject.Inject;
 

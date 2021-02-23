@@ -1,4 +1,4 @@
-package com.tulotero.games.beans;
+package com.tulotero.games.common.beans;
 
 import lombok.Value;
 

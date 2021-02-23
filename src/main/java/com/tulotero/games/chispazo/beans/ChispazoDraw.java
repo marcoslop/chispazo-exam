@@ -1,7 +1,7 @@
 package com.tulotero.games.chispazo.beans;
 
 
-import com.tulotero.games.beans.ScrutinyPrize;
+import com.tulotero.games.common.beans.ScrutinyPrize;
 import lombok.Value;
 
 import java.util.Date;

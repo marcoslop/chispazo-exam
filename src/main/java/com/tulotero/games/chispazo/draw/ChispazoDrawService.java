@@ -1,4 +1,4 @@
-package com.tulotero.games.chispazo;
+package com.tulotero.games.chispazo.draw;
 
 import com.tulotero.games.chispazo.beans.ChispazoDraw;
 

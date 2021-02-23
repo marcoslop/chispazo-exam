@@ -1,7 +1,7 @@
 package com.tulotero.games.chispazo.prizes;
 
-import com.tulotero.games.beans.PrizeInfo;
-import com.tulotero.games.beans.ScrutinyPrize;
+import com.tulotero.games.common.beans.PrizeInfo;
+import com.tulotero.games.common.beans.ScrutinyPrize;
 import com.tulotero.games.chispazo.beans.ChispazoBet;
 import com.tulotero.games.chispazo.beans.ChispazoDraw;
 import com.tulotero.games.chispazo.beans.ChispazoPrizeCheck;

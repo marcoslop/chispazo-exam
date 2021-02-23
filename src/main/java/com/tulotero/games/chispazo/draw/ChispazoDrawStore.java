@@ -1,6 +1,6 @@
-package com.tulotero.games.chispazo;
+package com.tulotero.games.chispazo.draw;
 
-import com.tulotero.games.beans.ScrutinyPrize;
+import com.tulotero.games.common.beans.ScrutinyPrize;
 import com.tulotero.games.chispazo.beans.ChispazoDraw;
 import org.joda.time.DateTime;
 
