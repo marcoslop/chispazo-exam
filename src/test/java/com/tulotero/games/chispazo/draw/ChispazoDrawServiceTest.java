@@ -31,14 +31,14 @@ public class ChispazoDrawServiceTest {
         MockitoAnnotations.initMocks(this);
         service = new ChispazoDrawService();
         service.store = store;
-
-        draw1 = givenDraw(1L);
-        draw2 = givenDraw(2L);
-        doReturn(asList(draw1, draw2)).when(store).getDraws();
     }
 
     @Test
     public void getDraw_idFound() {
+        ChispazoDraw draw1 = givenDraw(1L);
+        ChispazoDraw draw2 = givenDraw(2L);
+        doReturn(asList(draw1, draw2)).when(store).getDraws();
+
         Optional<ChispazoDraw> drawOpt = service.getDraw(draw1.getDrawId());
 
         assertThat(drawOpt.isPresent(), is(true));
@@ -47,6 +47,10 @@ public class ChispazoDrawServiceTest {
 
     @Test
     public void getDraw_idNotFound() {
+        ChispazoDraw draw1 = givenDraw(1L);
+        ChispazoDraw draw2 = givenDraw(2L);
+        doReturn(asList(draw1, draw2)).when(store).getDraws();
+
         Optional<ChispazoDraw> drawOpt = service.getDraw(10L);
 
         assertThat(drawOpt.isPresent(), is(false));
