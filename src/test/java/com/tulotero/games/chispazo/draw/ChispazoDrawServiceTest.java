@@ -1,8 +1,6 @@
 package com.tulotero.games.chispazo.draw;
 
 import com.tulotero.games.chispazo.beans.ChispazoDraw;
-import com.tulotero.games.chispazo.draw.ChispazoDrawService;
-import com.tulotero.games.chispazo.draw.ChispazoDrawStore;
 import org.joda.time.DateTime;
 import org.junit.Before;
 import org.junit.Test;
