@@ -3,8 +3,8 @@ package com.tulotero.games.chispazo.beans;
 import org.junit.Test;
 
 import static java.util.Arrays.asList;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
 
 public class ChispazoBetTest {
 

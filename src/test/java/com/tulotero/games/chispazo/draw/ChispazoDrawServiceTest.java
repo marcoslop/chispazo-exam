@@ -10,8 +10,8 @@ import org.mockito.MockitoAnnotations;
 import java.util.Optional;
 
 import static java.util.Arrays.asList;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.assertThat;
 import static org.mockito.Mockito.doReturn;
 
 public class ChispazoDrawServiceTest {
