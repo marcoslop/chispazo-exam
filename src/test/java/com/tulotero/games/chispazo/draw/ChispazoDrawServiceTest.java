@@ -21,9 +21,6 @@ public class ChispazoDrawServiceTest {
     @Mock
     ChispazoDrawStore store;
 
-    ChispazoDraw draw1;
-    ChispazoDraw draw2;
-
     @Before
     public void setUp() throws Exception {
         MockitoAnnotations.initMocks(this);
