@@ -10,6 +10,10 @@
     <packaging>war</packaging>
     <description>Exercise to be completed for people applying to backend developer position</description>
 
+    <properties>
+        <dockerHost>unix:///var/run/docker.sock</dockerHost>
+    </properties>
+
     <dependencies>
         <dependency>
             <groupId>javax</groupId>
@@ -140,7 +144,7 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>0.31.0</version>
                 <configuration>
-                    <dockerHost>unix:///var/run/docker.sock</dockerHost>
+                    <dockerHost>${dockerHost}</dockerHost>
                     <images>
                         <image>
                             <name>tulotero/chispazo:latest</name>
